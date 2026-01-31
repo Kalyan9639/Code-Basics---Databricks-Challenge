@@ -154,4 +154,4 @@ RetailPulse-AI/
 ## 🏁 Final Note
 **RetailPulse AI** is not a demo — it’s a **production-grade blueprint** for customer intelligence systems used by modern retail enterprises.
 
-> Built as part of the **Databricks 14-Day AI Challenge**
+# Built as part of the **Databricks 14-Day AI Challenge**
