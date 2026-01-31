@@ -100,11 +100,17 @@ The **baseline Random Forest** was selected for production because:
 </p>
 
 - **Overall Accuracy:** **88.95%**
-- **High-Confidence Predictions (> 0.85):** 90% of Elite class
+
 
 <p align="center">
-  <img src="Output Images/Confidence Score Distribution.png" width="600" />
+  <img src="Output Images/Confidence Score Distribution.png" width="650" />
 </p>
+
+- The model produces a **well-spread confidence distribution**, indicating it is not defaulting to majority-class predictions.
+- Most predictions fall in the **moderate-to-high confidence range (≈ 0.45 – 0.75)**, showing stable decision boundaries.
+- Confidence scores vary meaningfully across customers, enabling **risk-aware downstream decision making** rather than binary classification.
+- This confidence-aware output allows business teams to **prioritize actions only on high-certainty predictions**, reducing operational risk.
+
 
 ---
 
@@ -128,20 +134,26 @@ The **baseline Random Forest** was selected for production because:
   <img src="Output Images/Confusion Analysis.png" width="600" />
 </p>
 
-- Minimal confusion between adjacent tiers
-- High precision for **Elite customers**, reducing marketing risk
+- Strong diagonal concentration confirms **high agreement between actual and predicted segments**.
+- Most misclassifications occur **between adjacent tiers** (Basic ↔ Elite, Elite ↔ Premium), which is expected in behavioral segmentation problems.
+- Off-diagonal Elite–Premium overlap highlights **“Hidden Elites”** — customers behaving like higher-tier spenders despite lower current labels.
+- There is minimal extreme misclassification (Basic ↔ Premium), indicating **low business risk** from incorrect targeting.
+
 
 ---
 
 ## 📊 Databricks SQL Dashboard
-**Executive-ready insights:**
-- Live accuracy monitoring
-- Confidence-weighted predictions
-- Identification of **Hidden Elite customers**
 
-<!-- <p align="center">
+<p align="center">
   <img src="Output Images/Average Confidence by Spend Tier.png" width="650" />
-</p> -->
+</p>
+
+- The predicted distribution shows a **larger-than-expected Premium customer volume**, revealing untapped high-value segments.
+- Average confidence is **highest for Premium and Basic tiers**, indicating strong model reliability at the revenue extremes.
+- Slightly lower confidence for Elite predictions reflects natural overlap between mid-tier and high-tier customer behavior.
+- These insights support **tier-specific strategies**:
+  - High-confidence Premium → immediate upsell & retention
+  - Moderate-confidence Elite → targeted experimentation
 
 ---
 
