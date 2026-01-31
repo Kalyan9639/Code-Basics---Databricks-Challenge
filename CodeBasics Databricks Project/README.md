@@ -129,14 +129,6 @@ Raw Data ──▶ Bronze ──▶ Silver ──▶ Gold ──▶ BI / ML Cons
 ---
 
 
----
-
-## 🏆 Why This Project Stands Out
-- ✔ Processes **1M+ records** using Spark
-- ✔ Real-world Spark debugging & metadata handling
-- ✔ MLflow-governed ML lifecycle
-- ✔ Business-first insights, not just accuracy
-- ✔ Interview & production ready
 
 ---
 
