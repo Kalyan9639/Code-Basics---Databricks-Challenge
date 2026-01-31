@@ -123,8 +123,27 @@ Raw Data ──▶ Bronze ──▶ Silver ──▶ Gold ──▶ BI / ML Cons
 
 ---
 
-## 📂 Enterprise-Grade Project Structure
+## 📂 Project Structure
 
+```
+RetailPulse-AI/
+│
+├── Output Images/
+│   ├── Average Confidence by Spend Tier.png
+│   ├── Business Insight.png
+│   ├── Confidence Score Distribution.png
+│   ├── Confusion Analysis.png
+│   ├── Global Model Accuracy.png
+│   └── feature_importance.png
+│
+├── Data loading and bronze level.ipynb
+├── filling null values -- silver level.ipynb
+├── Feature Engineering -- silver level.ipynb
+├── Feature Importance -- gold.ipynb
+├── model training -- gold.ipynb
+│
+└── README.md
+```
 
 ---
 
