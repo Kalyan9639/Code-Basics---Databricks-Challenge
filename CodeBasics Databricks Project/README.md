@@ -38,7 +38,7 @@ Instead of relying on static membership labels, the system uncovers **“Hidden 
 
 ```
 Raw Data ──▶ Bronze ──▶ Silver ──▶ Gold ──▶ BI / ML Consumers
-(Ingest) (Clean & FE) (Predictions)
+(Ingest) (Clean & Feature Engineering) (Predictions)
 ```
 
 
@@ -71,14 +71,24 @@ Raw Data ──▶ Bronze ──▶ Silver ──▶ Gold ──▶ BI / ML Cons
 
 ---
 
-## 🤖 Machine Learning Pipeline
+## 🤖 Machine Learning Approach
 
-| Component | Choice | Reason |
-|--------|-------|-------|
-| Model | Random Forest Classifier | Robust, interpretable, scalable |
-| Tuning | 3-Fold Cross-Validation | Stable generalization |
-| Depth | MaxDepth = 10 | Prevent overfitting |
-| Governance | MLflow | Experiment & model tracking |
+Two Random Forest variants were evaluated:
+
+- **Baseline Random Forest Classifier**
+- **Hyperparameter-Tuned Random Forest**
+
+Both models achieved **statistically identical performance** across accuracy and class-wise metrics.
+
+### 📌 Final Model Selection Rationale
+The **baseline Random Forest** was selected for production because:
+
+- Comparable accuracy to the tuned model
+- Lower training and inference complexity
+- Faster retraining in distributed Spark environments
+- Reduced operational and governance overhead
+
+> This decision reflects a **production-first ML mindset**, prioritizing simplicity and reliability over marginal gains.
 
 
 ---
@@ -129,9 +139,9 @@ Raw Data ──▶ Bronze ──▶ Silver ──▶ Gold ──▶ BI / ML Cons
 - Confidence-weighted predictions
 - Identification of **Hidden Elite customers**
 
-<p align="center">
+<!-- <p align="center">
   <img src="Output Images/Average Confidence by Spend Tier.png" width="650" />
-</p>
+</p> -->
 
 ---
 
