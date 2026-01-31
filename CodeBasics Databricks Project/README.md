@@ -2,31 +2,24 @@
 ### *Enterprise-Scale Customer Intelligence with Databricks & Spark ML*
 
 <p align="center">
+  <img src="Output Images/Business Insight.png" width="800" />
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Databricks-Platform-red?style=for-the-badge&logo=databricks" />
   <img src="https://img.shields.io/badge/Apache%20Spark-ML-orange?style=for-the-badge&logo=apachespark" />
   <img src="https://img.shields.io/badge/MLflow-Governed-blue?style=for-the-badge&logo=mlflow" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Big%20Data-1M%2B%20Records-success?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Accuracy-88.95%25-brightgreen?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Architecture-Medallion-purple?style=for-the-badge" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Use%20Case-Retail%20Analytics-blueviolet?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Challenge-Databricks%2014--Day%20AI%20Challenge-black?style=for-the-badge" />
 </p>
 
-
-<p align="center">
-  <img src="Output Images/Business Insight.png" width="800" />
-</p>
-
-<p align="center">
-  <b>1M+ Records • Medallion Architecture • MLflow Governed • Production-Ready</b>
-</p>
 
 ---
 
