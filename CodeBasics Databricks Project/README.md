@@ -118,7 +118,7 @@ Raw Data ──▶ Bronze ──▶ Silver ──▶ Gold ──▶ BI / ML Cons
 - Identification of **Hidden Elite customers**
 
 <p align="center">
-  <img src="Output Images/Average Confidence by Spend.png" width="650" />
+  <img src="Output Images/Average Confidence by Spend Tier.png" width="650" />
 </p>
 
 ---
