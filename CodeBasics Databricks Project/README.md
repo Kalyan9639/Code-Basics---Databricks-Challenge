@@ -142,7 +142,7 @@ The **baseline Random Forest** was selected for production because:
 
 ---
 
-## 📊 Databricks SQL Dashboard
+## 📊 Prediction Confidence by Customer Tier
 
 <p align="center">
   <img src="Output Images/Average Confidence by Spend Tier.png" width="650" />
