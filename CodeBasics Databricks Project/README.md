@@ -68,7 +68,6 @@ Raw Data ──▶ Bronze ──▶ Silver ──▶ Gold ──▶ BI / ML Cons
 | Depth | MaxDepth = 10 | Prevent overfitting |
 | Governance | MLflow | Experiment & model tracking |
 
-📌 Model registered in **Databricks Model Registry**.
 
 ---
 
