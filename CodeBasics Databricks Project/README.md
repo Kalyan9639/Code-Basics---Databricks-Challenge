@@ -1,80 +1,147 @@
-# 📊 RetailPulse AI: 1M Row Customer Intelligence System
-### *Predictive Value Segmentation using Medallion Architecture & Spark ML*
+# 🚀 RetailPulse AI  
+### *Enterprise-Scale Customer Intelligence with Databricks & Spark ML*
+
+<p align="center">
+  <img src="Output Images/Business Insight.png" width="800" />
+</p>
+
+<p align="center">
+  <b>1M+ Records • Medallion Architecture • MLflow Governed • Production-Ready</b>
+</p>
 
 ---
 
-## 🚀 Project Overview
-**RetailPulse AI** is an end-to-end data engineering and machine learning pipeline designed to predict customer spending tiers across 1 million transaction records. By moving beyond static membership labels, this system identifies "Hidden Elite" customers with **88.95% accuracy**, allowing for high-precision marketing and resource allocation.
+## 🧠 Executive Summary
+**RetailPulse AI** is an end-to-end **data engineering + machine learning system** built on **Databricks** to predict customer value tiers at scale.  
+Instead of relying on static membership labels, the system uncovers **“Hidden Elite” customers** using behavioral signals — enabling **precision marketing, smarter spend allocation, and revenue growth**.
 
-
-
----
-
-## 🛠️ Technical Architecture & Workflow
-This project strictly adheres to the **Databricks Medallion Architecture**, ensuring data quality and lineage at every stage.
-
-### 1. Data Engineering (Medallion Layers)
-* **Bronze Layer:** Raw ingestion of 1,000,000 transaction records into Unity Catalog.
-* **Silver Layer (The Engine):** * **Advanced Imputation:** Handled missing demographic data using **Age-Bin Mode Imputation** to preserve data distribution.
-    * **Feature Engineering:** Engineered `is_weekend` from temporal data and implemented **Target Encoding** for 50+ unique States.
-    * **Technical Beauty Fix:** Resolved a critical Spark metadata conflict by programmatically stripping categorical attributes from encoded vectors, ensuring model compatibility.
-* **Gold Layer:** Final "Business-Ready" table containing Actuals, Predictions, and **AI Confidence Scores** for direct BI consumption.
-
-### 2. Machine Learning Pipeline
-* **Model:** Random Forest Classifier (Chosen for its robustness and interpretability).
-* **Optimization:** Hyperparameter tuning via **3-Fold Cross-Validation** (MaxDepth: 10, NumTrees: 100).
-* **Governance:** Fully integrated with **MLflow** for experiment tracking and registered in the **Databricks Model Registry** for version control.
+- ✅ **Global Accuracy:** **88.95%**
+- ✅ **Scale:** **1,000,000+ transactions**
+- ✅ **Enterprise-grade:** Medallion Architecture, MLflow, Model Registry
 
 ---
 
-## 📈 Key Business Insights
-Our AI doesn't just predict; it provides a roadmap for growth. 
+## 🏗️ System Architecture
+### Databricks Medallion Architecture
 
-| Feature | Importance | Business Strategy |
-| :--- | :--- | :--- |
-| **State_Target_Encoded** | **High** | Optimize logistics and regional ad-spend in high-impact states. |
-| **Segment_vec** | **Medium** | Transition from "Membership-based" to "Behavior-based" loyalty tiers. |
-| **is_weekend** | **Significant** | Launch 40% more 'Elite' promotions on Friday evenings to capture peak spending. |
-
----
-
-## 🖥️ Databricks SQL Dashboard
-The final output is a live executive dashboard that bridges the gap between AI and Decision Making.
-
-* **Precision Audit:** Real-time monitoring of our **88.95% accuracy** rate.
-* **Confidence Profile:** Highlighting that 90%+ of Tier-1 (Premium) predictions have a confidence score > 0.85.
-* **Opportunity Map:** Identifying "Hidden Champions"—customers predicted as Elite despite having lower current membership levels.
-
-
-
----
-
-## 🏆 Evaluation Highlights (Top-Rank Criteria)
-* **Scalability:** Processed **1,000,000 records** using Spark's distributed computing.
-* **AI Innovation:** Integrated **Confidence Scores** into the Gold layer to allow for risk-adjusted business decisions.
-* **Technical Rigor:** Documented resolution of Spark UDT metadata conflicts during the vector assembly process.
-* **Governance:** Every model iteration is audited and logged in **MLflow**, fulfilling strict enterprise standards.
-
----
-
-## 📂 Project Structure
-```text
-├── notebooks/
-│   ├── 01_Data_Ingestion_Bronze
-│   ├── 02_Feature_Eng_Silver
-│   └── 03_Model_Training_Gold
-├── artifacts/
-│   ├── feature_importance.png
-│   └── ml_model_v1
-└── README.md
+```
+Raw Data ──▶ Bronze ──▶ Silver ──▶ Gold ──▶ BI / ML Consumers
+(Ingest) (Clean & FE) (Predictions)
 ```
 
+
+| Layer | Purpose | Highlights |
+|-----|--------|-----------|
+| **Bronze** | Raw ingestion | 1M transaction records, schema preserved |
+| **Silver** | Feature engineering | Null handling, encoding, behavioral features |
+| **Gold** | Business-ready | Predictions + confidence scores |
+
 ---
 
-## 🏁 Conclusion
-RetailPulse AI demonstrates that with the right architecture, big data can be transformed into high-precision strategy. 
-By combining Technical Beauty with Business Value, this project provides a production-ready template for retail intelligence.
+## 🔬 Data Engineering Highlights
+
+### 🔹 Bronze Layer
+- Raw ingestion into Databricks tables
+- Schema validation & lineage tracking
+
+### 🔹 Silver Layer (Core Intelligence)
+- **Age-Bin Mode Imputation** to preserve demographic distribution
+- **Target Encoding** for 50+ unique states
+- **Behavioral Features** (`is_weekend`, spending patterns)
+- ⚠️ **Spark Metadata Fix**  
+  Resolved vector assembler conflicts by stripping categorical metadata — a real-world Spark pitfall rarely documented.
+
+### 🔹 Gold Layer
+- Final analytics table with:
+  - Actual Segment
+  - Predicted Segment
+  - **Prediction Confidence Score**
 
 ---
 
-> Created as part of the Databricks 14-Day AI Challenge.
+## 🤖 Machine Learning Pipeline
+
+| Component | Choice | Reason |
+|--------|-------|-------|
+| Model | Random Forest Classifier | Robust, interpretable, scalable |
+| Tuning | 3-Fold Cross-Validation | Stable generalization |
+| Depth | MaxDepth = 10 | Prevent overfitting |
+| Governance | MLflow | Experiment & model tracking |
+
+📌 Model registered in **Databricks Model Registry**.
+
+---
+
+## 📊 Model Performance
+
+<p align="center">
+  <img src="Output Images/Global Model Accuracy.png" width="600" />
+</p>
+
+- **Overall Accuracy:** **88.95%**
+- **High-Confidence Predictions (> 0.85):** 90% of Elite class
+
+<p align="center">
+  <img src="Output Images/Confidence Score Distribution.png" width="600" />
+</p>
+
+---
+
+## 📈 Feature Importance & Business Impact
+
+<p align="center">
+  <img src="Output Images/feature_importance.png" width="650" />
+</p>
+
+| Feature | Importance | Business Action |
+|------|-----------|----------------|
+| **State_Target_Encoded** | 🔥 High | Optimize regional ad spend |
+| **Segment_vec** | ⚡ Medium | Shift to behavior-based loyalty |
+| **is_weekend** | 📊 Significant | Launch premium weekend offers |
+
+---
+
+## 🧩 Confusion & Risk Analysis
+
+<p align="center">
+  <img src="Output Images/Confusion Analysis.png" width="600" />
+</p>
+
+- Minimal confusion between adjacent tiers
+- High precision for **Elite customers**, reducing marketing risk
+
+---
+
+## 📊 Databricks SQL Dashboard
+**Executive-ready insights:**
+- Live accuracy monitoring
+- Confidence-weighted predictions
+- Identification of **Hidden Elite customers**
+
+<p align="center">
+  <img src="Output Images/Average Confidence by Spend.png" width="650" />
+</p>
+
+---
+
+## 📂 Enterprise-Grade Project Structure
+
+
+---
+
+
+---
+
+## 🏆 Why This Project Stands Out
+- ✔ Processes **1M+ records** using Spark
+- ✔ Real-world Spark debugging & metadata handling
+- ✔ MLflow-governed ML lifecycle
+- ✔ Business-first insights, not just accuracy
+- ✔ Interview & production ready
+
+---
+
+## 🏁 Final Note
+**RetailPulse AI** is not a demo — it’s a **production-grade blueprint** for customer intelligence systems used by modern retail enterprises.
+
+> Built as part of the **Databricks 14-Day AI Challenge**
