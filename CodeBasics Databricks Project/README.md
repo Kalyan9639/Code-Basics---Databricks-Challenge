@@ -1,9 +1,9 @@
 # 🚀 RetailPulse AI  
 ### *Enterprise-Scale Customer Intelligence with Databricks & Spark ML*
 
-<p align="center">
+<!-- <p align="center">
   <img src="Output Images/Business Insight.png" width="800" />
-</p>
+</p> -->
 
 <p align="center">
   <img src="https://img.shields.io/badge/Databricks-Platform-red?style=for-the-badge&logo=databricks" />
