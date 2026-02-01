@@ -13,9 +13,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Architecture-Medallion-purple?style=for-the-badge" />
-</p>
+<!-- </p> -->
 
-<p align="center">
+<!-- <p align="center"> -->
   <img src="https://img.shields.io/badge/Use%20Case-Retail%20Analytics-blueviolet?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Challenge-Databricks%2014--Day%20AI%20Challenge-green?style=for-the-badge" />
 </p>
